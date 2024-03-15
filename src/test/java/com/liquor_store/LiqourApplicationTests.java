@@ -1,4 +1,4 @@
-package com.liqour_store;
+package com.liquor_store;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
