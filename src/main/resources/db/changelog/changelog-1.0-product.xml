@@ -1,0 +1,27 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="created product table" author="Mourine">
+
+        <createTable tableName="product_tb">
+            <column  name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="category_id" type="int"/>
+            <column name="name" type="varchar(255)"/>
+            <column name="brand" type="varchar(255)"/>
+            <column name="model_no" type="varchar(255)"/>
+            <column name="unit_cost" type="double"/>
+            <column name="quantity" type="integer"/>
+            <column name="alcohol_percentage" type="double"/>
+            <column name="volume" type="varchar(200)">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

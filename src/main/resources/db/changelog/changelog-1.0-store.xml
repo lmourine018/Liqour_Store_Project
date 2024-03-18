@@ -1,0 +1,25 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+
+
+    <changeSet id="created store table" author="Mourine">
+
+        <createTable tableName="store">
+            <column  name="id" type="int">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="category_id" type="int"/>
+            <column name="store_name" type="varchar(255)"/>
+            <column name="city_name" type="varchar(255)"/>
+            <column name="address" type="varchar(255)"/>
+            <column name="phone" type="varchar(255)"/>
+            <column name="email" type="varchar(200)">
+                <constraints nullable="true"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

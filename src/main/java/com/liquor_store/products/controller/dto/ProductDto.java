@@ -14,6 +14,7 @@ public class ProductDto {
     private Integer categoryId;
     @Column(name = "name")
     private String name;
+    private  Integer quantity;
     private String brand;
     private Double unit_cost;
     private String volume;

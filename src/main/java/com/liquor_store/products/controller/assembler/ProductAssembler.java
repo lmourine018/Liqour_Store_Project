@@ -17,6 +17,7 @@ public class ProductAssembler {
                .setUnit_cost(from.getUnit_cost())
                .setBrand(from.getBrand())
                .setCategoryId(from.getCategoryId())
+               .setQuantity(from.getQuantity())
                .setVolume(from.getVolume());
 return to;
     }
@@ -28,6 +29,7 @@ public Product toProduct(ProductDto from){
                .setBrand(from.getBrand())
                .setCategoryId(from.getCategoryId())
                .setVolume(from.getVolume())
+               .setQuantity(from.getQuantity())
                .setAlcohol_percentage(from.getAlcohol_percentage());
        return to;
 }
