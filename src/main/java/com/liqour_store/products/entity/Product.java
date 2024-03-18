@@ -23,5 +23,6 @@ public class Product {
     private Double unit_cost;
     private String volume;
     private Double alcohol_percentage;
+    private Integer quantity;
 
 }
