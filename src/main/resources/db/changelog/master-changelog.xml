@@ -6,4 +6,8 @@
     <include file="/db/changelog/changelog-1.0-product.xml"/>
     <include file="/db/changelog/changelog-1.0-inventory.xml"/>
     <include file="/db/changelog/changelog-1.0-store.xml"/>
+<include file="/db/changelog/changelog-1.0-order-details-table.xml"/>
+<include file="/db/changelog/changelog-1.0-order-table.xml"/>
+<include file="/db/changelog/changelog-1.0-sales-transaction-table.xml"/>
+<include file="/db/changelog/changelog-1.0-transaction-details-table.xml"/>
 </databaseChangeLog>
