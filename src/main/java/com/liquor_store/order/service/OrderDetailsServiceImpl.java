@@ -30,7 +30,7 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
     }
 
     @Override
-    public OrderDetailsDto getOrderDetailById(Long id) {
+    public OrderDetailsDto getOrderDetailById(Integer id) {
         OrderDetails orderDetail = orderDetailsRepository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Order Detail not found with id " + id));
         return orderDetailsAssembler.toDto(orderDetail);
     }
@@ -43,7 +43,7 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
     }
 
     @Override
-    public OrderDetailsDto updateOrderDetail(Long id, OrderDetailsDto orderDetailsDto) {
+    public OrderDetailsDto updateOrderDetail(Integer id, OrderDetailsDto orderDetailsDto) {
         OrderDetails existingOrderDetails = orderDetailsRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Order Detail not found with id " + id));
 
@@ -57,7 +57,7 @@ public class OrderDetailsServiceImpl implements OrderDetailsService {
     }
 
     @Override
-    public void deleteOrderDetail(Long id) {
+    public void deleteOrderDetail(Integer id) {
 
     }
 }

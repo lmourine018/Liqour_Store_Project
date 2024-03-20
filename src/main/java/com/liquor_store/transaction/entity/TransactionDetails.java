@@ -10,20 +10,19 @@ public class TransactionDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Transaction_Detail_ID")
-    private Long id;
+    private Integer id;
 
 //    @ManyToOne
 //    @JoinColumn(name = "Transaction_ID")
-    private int salesTransactionId;
+    private Integer salesTransactionId;
 //
 //    @ManyToOne
 //    @JoinColumn(name = "Product_ID")
-    private int productId;
+    private Integer productId;
 
-    @Column(name = "Quantity")
-    private int quantity;
+    @Column(name = "quantity")
+    private Integer quantity;
 
-    @Column(name = "Subtotal")
+    @Column(name = "subtotal")
     private double subtotal;
 }

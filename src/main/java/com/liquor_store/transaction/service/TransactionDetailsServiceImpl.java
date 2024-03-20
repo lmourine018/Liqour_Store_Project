@@ -30,7 +30,7 @@ public class TransactionDetailsServiceImpl implements TransactionDetailsService 
     }
 
     @Override
-    public TransactionDetailsDto getTransactionDetailById(Long id) {
+    public TransactionDetailsDto getTransactionDetailById(Integer id) {
         TransactionDetails transactionDetail = transactionDetailRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Transaction detail not found with id: " + id));
         return transactionDetailsAssembler.toDto(transactionDetail);
@@ -44,7 +44,7 @@ public class TransactionDetailsServiceImpl implements TransactionDetailsService 
     }
 
     @Override
-    public TransactionDetailsDto updateTransactionDetail(Long id, TransactionDetailsDto transactionDetailDTO) {
+    public TransactionDetailsDto updateTransactionDetail(Integer id, TransactionDetailsDto transactionDetailDTO) {
         if (!transactionDetailRepository.existsById(id)) {
             throw new ResourceNotFoundException("Transaction detail not found with id: " + id);
         }
@@ -55,7 +55,7 @@ public class TransactionDetailsServiceImpl implements TransactionDetailsService 
     }
 
     @Override
-    public void deleteTransactionDetails(Long id) {
+    public void deleteTransactionDetails(Integer id) {
         if (!transactionDetailRepository.existsById(id)) {
             throw new ResourceNotFoundException("Transaction detail not found with id: " + id);
         }

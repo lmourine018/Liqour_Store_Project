@@ -26,7 +26,7 @@ public class SalesTransactionServiceImpl implements SalesTransactionService {
     }
 
     @Override
-    public SalesTransactionDto getSalesTransactionById(Long id) {
+    public SalesTransactionDto getSalesTransactionById(Integer id) {
         SalesTransaction salesTransaction = salesTransactionRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Sales transaction not found with id: " + id));
         return salesTransactionAssembler.toDto(salesTransaction);
@@ -40,18 +40,18 @@ public class SalesTransactionServiceImpl implements SalesTransactionService {
     }
 
     @Override
-    public SalesTransactionDto updateSalesTransaction(Long id, SalesTransactionDto salesTransactionDTO) {
+    public SalesTransactionDto updateSalesTransaction(Integer id, SalesTransactionDto salesTransactionDto) {
         if (!salesTransactionRepository.existsById(id)) {
             throw new ResourceNotFoundException("Sales transaction not found with id: " + id);
         }
-        SalesTransaction salesTransaction = salesTransactionAssembler.toEntity(salesTransactionDTO);
+        SalesTransaction salesTransaction = salesTransactionAssembler.toEntity(salesTransactionDto);
         salesTransaction.setId(id);
         SalesTransaction updatedSalesTransaction = salesTransactionRepository.save(salesTransaction);
         return salesTransactionAssembler.toDto(updatedSalesTransaction);
     }
 
     @Override
-    public void deleteSalesTransaction(Long id) {
+    public void deleteSalesTransaction(Integer id) {
         if (!salesTransactionRepository.existsById(id)) {
             throw new ResourceNotFoundException("Sales transaction not found with id: " + id);
         }

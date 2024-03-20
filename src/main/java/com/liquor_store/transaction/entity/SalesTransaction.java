@@ -11,20 +11,19 @@ import java.util.Date;
 public class SalesTransaction {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Transaction_ID")
-    private Long id;
+    private Integer id;
 
 //    @ManyToOne
 //    @JoinColumn(name = "Store_ID")
-    private int storeId;
+    private Integer storeId;
 //
 //    @ManyToOne
 //    @JoinColumn(name = "Employee_ID")
-    private int employeeId;
+    private Integer employeeId;
 
-    @Column(name = "Date")
+    @Column(name = "date")
     private Date date;
 
-    @Column(name = "Total")
+    @Column(name = "total")
     private Double total;
 }

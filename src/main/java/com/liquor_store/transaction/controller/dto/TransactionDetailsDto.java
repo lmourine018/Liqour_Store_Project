@@ -6,9 +6,9 @@ import lombok.Data;
 @Data
 public class TransactionDetailsDto {
 
-    private int transactionId;
-    private int productId;
-    private int quantity;
+    private Integer transactionId;
+    private Integer productId;
+    private Integer quantity;
     private double subtotal;
 
 }

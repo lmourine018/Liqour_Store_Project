@@ -1,0 +1,26 @@
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
+
+    <changeSet id="created-order-table" author="Benson">
+
+        <createTable tableName="order_table">
+            <column name="id" type="integer">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+
+            <column name="store_id"  type="integer">
+                <constraints nullable="false"/>
+            </column>
+            <column name="employee_id"  type="integer"/>
+            <column name="date"  type="timestamp">
+                <constraints nullable="false"/>
+            </column>
+            <column name="total"  type="double"/>
+
+        </createTable>
+    </changeSet>
+
+</databaseChangeLog>

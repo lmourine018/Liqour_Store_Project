@@ -26,7 +26,7 @@ public class TransactionDetailsController {
     }
 
     @GetMapping("/{id}")
-    public TransactionDetailsDto getTransactionDetailById(@PathVariable Long id) {
+    public TransactionDetailsDto getTransactionDetailById(@PathVariable Integer id) {
         return transactionDetailsService.getTransactionDetailById(id);
     }
 
@@ -36,12 +36,12 @@ public class TransactionDetailsController {
     }
 
     @PutMapping("/{id}")
-    public TransactionDetailsDto updateTransactionDetail(@PathVariable Long id, @RequestBody TransactionDetailsDto transactionDetailsDto) {
+    public TransactionDetailsDto updateTransactionDetail(@PathVariable Integer id, @RequestBody TransactionDetailsDto transactionDetailsDto) {
         return transactionDetailsService.updateTransactionDetail(id, transactionDetailsDto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteTransactionDetails(@PathVariable Long id) {
+    public void deleteTransactionDetails(@PathVariable Integer id) {
         transactionDetailsService.deleteTransactionDetails(id);
     }
 }
