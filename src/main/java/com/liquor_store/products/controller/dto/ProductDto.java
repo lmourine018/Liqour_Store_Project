@@ -11,6 +11,7 @@ import lombok.experimental.Accessors;
 public class ProductDto {
     @Id
     private Integer id;
+    @Column(name = "category_id")
     private Integer categoryId;
     @Column(name = "name")
     private String name;

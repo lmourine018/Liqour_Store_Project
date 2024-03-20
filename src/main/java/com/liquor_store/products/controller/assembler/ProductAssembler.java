@@ -1,5 +1,6 @@
 package com.liquor_store.products.controller.assembler;
 
+import com.liquor_store.category.entity.Category;
 import com.liquor_store.products.controller.dto.ProductDto;
 import com.liquor_store.products.entity.Product;
 import lombok.AllArgsConstructor;
@@ -16,9 +17,12 @@ public class ProductAssembler {
                .setAlcohol_percentage(from.getAlcohol_percentage())
                .setUnit_cost(from.getUnit_cost())
                .setBrand(from.getBrand())
-               .setCategoryId(from.getCategoryId())
                .setQuantity(from.getQuantity())
                .setVolume(from.getVolume());
+
+       if (from.getCategory() != null){
+           to.setId(from.getCategory().getId());
+       }
 return to;
     }
 public Product toProduct(ProductDto from){
@@ -27,10 +31,15 @@ public Product toProduct(ProductDto from){
                .setName(from.getName())
                .setUnit_cost(from.getUnit_cost())
                .setBrand(from.getBrand())
-               .setCategoryId(from.getCategoryId())
                .setVolume(from.getVolume())
                .setQuantity(from.getQuantity())
                .setAlcohol_percentage(from.getAlcohol_percentage());
+
+       if (from.getCategoryId() != null){
+           Category category = new Category();
+           category.setId(from.getId());
+           to.setCategory(category);
+       }
        return to;
 }
 }
