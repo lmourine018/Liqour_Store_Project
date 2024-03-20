@@ -7,7 +7,7 @@
     <changeSet id="created-order-details-table" author="Benson">
 
     <createTable tableName="order_details">
-        <column name="order_details-id" type="integer">
+        <column name="id" type="integer">
             <constraints nullable="false" primaryKey="true"/>
         </column>
 

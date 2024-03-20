@@ -8,8 +8,8 @@ import java.util.List;
 public interface TransactionDetailsService {
 
     List<TransactionDetailsDto> getAllTransactionDetails();
-    TransactionDetailsDto getTransactionDetailById(Long id);
+    TransactionDetailsDto getTransactionDetailById(Integer id);
     TransactionDetailsDto createTransactionDetail(TransactionDetailsDto transactionDetailsDto);
-    TransactionDetailsDto updateTransactionDetail(Long id, TransactionDetailsDto transactionDetailsDto);
-    void deleteTransactionDetails(Long id);
+    TransactionDetailsDto updateTransactionDetail(Integer id, TransactionDetailsDto transactionDetailsDto);
+    void deleteTransactionDetails(Integer id);
 }

@@ -7,8 +7,8 @@ import java.util.List;
 public interface SalesTransactionService {
 
     List<SalesTransactionDto> getAllSalesTransactions();
-    SalesTransactionDto getSalesTransactionById(Long id);
+    SalesTransactionDto getSalesTransactionById(Integer id);
     SalesTransactionDto createSalesTransaction(SalesTransactionDto salesTransactionDTO);
-    SalesTransactionDto updateSalesTransaction(Long id, SalesTransactionDto salesTransactionDTO);
-    void deleteSalesTransaction(Long id);
+    SalesTransactionDto updateSalesTransaction(Integer id, SalesTransactionDto salesTransactionDTO);
+    void deleteSalesTransaction(Integer id);
 }

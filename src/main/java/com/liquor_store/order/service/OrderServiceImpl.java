@@ -29,7 +29,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public OrderDto getOrderById(Long id) {
+    public OrderDto getOrderById(Integer id) {
         Order order = orderRepository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("Order not found with id " + id));
         return orderAssembler.toDto(order);
@@ -43,7 +43,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public OrderDto updateOrder(Long id, OrderDto orderDto) {
+    public OrderDto updateOrder(Integer id, OrderDto orderDto) {
         Order existingOrder = orderRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Order not found with id " + id));
 
         existingOrder.setStoreId(orderDto.getStoreId());
@@ -56,7 +56,7 @@ public class OrderServiceImpl implements OrderService{
     }
 
     @Override
-    public void deleteOrder(Long id) {
+    public void deleteOrder(Integer id) {
         Order order = orderRepository.findById(id).orElseThrow(()-> new ResourceNotFoundException("Order not found with id " + id));
 
         orderRepository.delete(order);

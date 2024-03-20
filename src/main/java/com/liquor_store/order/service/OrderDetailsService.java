@@ -7,8 +7,8 @@ import java.util.List;
 public interface OrderDetailsService {
 
     List<OrderDetailsDto> getAllOrderDetails();
-    OrderDetailsDto getOrderDetailById(Long id);
+    OrderDetailsDto getOrderDetailById(Integer id);
     OrderDetailsDto createOrderDetail(OrderDetailsDto orderDetailDTO);
-    OrderDetailsDto updateOrderDetail(Long id, OrderDetailsDto orderDetailDTO);
-    void deleteOrderDetail(Long id);
+    OrderDetailsDto updateOrderDetail(Integer id, OrderDetailsDto orderDetailDTO);
+    void deleteOrderDetail(Integer id);
 }

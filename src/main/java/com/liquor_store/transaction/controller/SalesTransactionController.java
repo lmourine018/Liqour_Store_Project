@@ -22,7 +22,7 @@ public class SalesTransactionController {
     }
 
     @GetMapping("/{id}")
-    public SalesTransactionDto getSalesTransactionById(@PathVariable Long id) {
+    public SalesTransactionDto getSalesTransactionById(@PathVariable Integer id) {
         return salesTransactionService.getSalesTransactionById(id);
     }
 
@@ -32,12 +32,12 @@ public class SalesTransactionController {
     }
 
     @PutMapping("/{id}")
-    public SalesTransactionDto updateSalesTransaction(@PathVariable Long id, @RequestBody SalesTransactionDto salesTransactionDto) {
+    public SalesTransactionDto updateSalesTransaction(@PathVariable Integer id, @RequestBody SalesTransactionDto salesTransactionDto) {
         return salesTransactionService.updateSalesTransaction(id, salesTransactionDto);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteSalesTransaction(@PathVariable Long id) {
+    public void deleteSalesTransaction(@PathVariable Integer id) {
         salesTransactionService.deleteSalesTransaction(id);
     }
 }
